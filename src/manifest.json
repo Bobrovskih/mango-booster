@@ -1,0 +1,72 @@
+{
+    "manifest_version": 2,
+    "name": "Mango Booster",
+    "short_name": "Mango Booster",
+    "description": "chrome extension for engineers mango otp",
+    "homepage_url": "https://mango-office.ru/support",
+    "options_page": "/html/options.html",
+    "version": "1.0.0",
+    "icons": {
+        "16": "/images/logo_16.png",
+        "48": "/images/logo_48.png",
+        "128": "/images/logo_128.png"
+    },
+    "permissions": [
+        "activeTab",
+        "alarms",
+        "background",
+        "bookmarks",
+        "browsingData",
+        "clipboardRead",
+        "clipboardWrite",
+        "contentSettings",
+        "contextMenus",
+        "cookies",
+        "debugger",
+        "declarativeContent",
+        "desktopCapture",
+        "downloads",
+        "fontSettings",
+        "gcm",
+        "geolocation",
+        "history",
+        "identity",
+        "idle",
+        "management",
+        "nativeMessaging",
+        "notifications",
+        "pageCapture",
+        "power",
+        "printerProvider",
+        "privacy",
+        "proxy",
+        "sessions",
+        "storage",
+        "system.cpu",
+        "system.display",
+        "system.memory",
+        "system.storage",
+        "tabCapture",
+        "tabs",
+        "topSites",
+        "tts",
+        "ttsEngine",
+        "unlimitedStorage",
+        "webNavigation",
+        "webRequest",
+        "webRequestBlocking"
+    ],
+    "browser_action": {
+        "default_title": "Mango Booster",
+        "default_icon": "/images/logo_128.png",
+        "default_popup": "/html/popup.html"
+    },
+    "background": {
+        "scripts": [
+            "/jquery.js",
+            "/background.js"
+        ],
+        "persistent": true
+    },
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
