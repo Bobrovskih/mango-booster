@@ -7,6 +7,10 @@
     "build": "webpack --config webpack.dev.js --mode=development",
     "build:prod": "webpack --config webpack.prod.js --mode=production"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobrovskih/mango-booster.git"
+  },
   "keywords": [
     "mango",
     "booster",
