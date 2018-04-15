@@ -1,7 +1,9 @@
-const {
-    DefinePlugin
-} = require('webpack');
+const fs = require('fs');
+
+const { DefinePlugin } = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const SERVER = process.env.SERVER || 'http://localhost/';
 
 module.exports = {
@@ -20,11 +22,20 @@ module.exports = {
             from: './src/images',
             to: './images'
         }, {
-            from: './src/manifest.json',
-            to: './manifest.json'
-        }, {
             from: './src/js/jquery.js',
             to: './',
         }, ]),
+        new HtmlWebpackPlugin({
+            SERVER,
+            template: './src/html/background.html',
+            filename: './html/background.html',
+            chunks: [],
+        }),
+        new HtmlWebpackPlugin({
+            SERVER,
+            template: './src/manifest.html',
+            filename: './manifest.json',
+            chunks: [],
+        }),
     ],
 };
